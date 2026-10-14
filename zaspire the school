@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zaspire The School — Inspire. Aspire. Zaspire.</title>
+<meta name="description" content="Zaspire The School, Murad Nagar, Mehdipatnam, Hyderabad. A school that gets you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14121f; --paper:#fff8ee;
+  --pink:#ff4fa3; --lime:#c8ff3d; --blue:#3d5bff; --orange:#ff8a2b; --lilac:#c9b6ff;
+  --radius:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;line-height:1.55}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.hand{font-family:'Caveat',cursive;font-weight:700}
+
+/* NAV */
+nav{position:sticky;top:12px;z-index:50;margin:12px auto 0;max-width:1180px;padding:0 20px}
+.nav-in{display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:var(--paper);border-radius:999px;padding:10px 12px 10px 22px;box-shadow:6px 6px 0 var(--pink)}
+.logo{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.3rem;text-decoration:none}
+.logo span{color:var(--lime)}
+.links{display:flex;gap:22px;align-items:center}
+.links a{text-decoration:none;font-weight:500;font-size:.95rem}
+.links a:hover{color:var(--lime)}
+.btn{display:inline-block;background:var(--lime);color:var(--ink)!important;font-weight:700;padding:12px 22px;border-radius:999px;border:2.5px solid var(--ink);text-decoration:none;transition:transform .15s,box-shadow .15s;box-shadow:4px 4px 0 var(--ink);cursor:pointer;font-size:1rem;font-family:inherit}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.btn.pink{background:var(--pink)}
+.nav-in .btn{border-color:var(--lime);box-shadow:none;padding:9px 18px}
+.menu{display:none;background:none;border:0;color:var(--paper);font-size:1.6rem;cursor:pointer}
+
+/* HERO */
+.hero{position:relative;padding:70px 0 90px}
+.hero h1{font-size:clamp(3.2rem,11vw,9rem);font-weight:800;text-transform:uppercase}
+.hero h1 .o{color:var(--pink)}
+.hero h1 .hl{background:var(--lime);padding:0 .12em;border-radius:.15em;display:inline-block;transform:rotate(-2deg)}
+.hero p.lead{font-size:1.25rem;max-width:520px;margin:26px 0 30px}
+.hero-row{display:flex;gap:16px;flex-wrap:wrap}
+.sticker{position:absolute;font-weight:800;font-family:'Bricolage Grotesque';padding:12px 20px;border:2.5px solid var(--ink);border-radius:999px;box-shadow:4px 4px 0 var(--ink);animation:float 5s ease-in-out infinite}
+.s1{top:30px;right:6%;background:var(--orange);transform:rotate(8deg)}
+.s2{bottom:120px;right:14%;background:var(--lilac);transform:rotate(-7deg);animation-delay:-2s}
+.s3{top:48%;right:2%;background:var(--lime);transform:rotate(5deg);animation-delay:-3.5s}
+@keyframes float{50%{translate:0 -12px}}
+.blob{position:absolute;z-index:-1;border-radius:50%;filter:blur(2px)}
+.b1{width:340px;height:340px;background:var(--pink);opacity:.18;top:0;right:-80px}
+.b2{width:260px;height:260px;background:var(--blue);opacity:.15;bottom:0;left:-80px}
+
+/* MARQUEE */
+.marquee{background:var(--ink);color:var(--lime);padding:16px 0;overflow:hidden;transform:rotate(-1.2deg);margin:0 -10px;border-block:3px solid var(--pink)}
+.track{display:flex;gap:40px;width:max-content;animation:scroll 22s linear infinite;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.7rem;text-transform:uppercase;white-space:nowrap}
+.track span:nth-child(even){color:var(--pink)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+section{padding:90px 0}
+.tag{display:inline-block;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--lime);padding:6px 14px;border-radius:999px;margin-bottom:18px}
+h2{font-size:clamp(2.2rem,6vw,4.4rem);font-weight:800;margin-bottom:20px}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.about p{font-size:1.15rem;margin-bottom:16px;max-width:540px}
+.photo{position:relative;border:3px solid var(--ink);border-radius:var(--radius);overflow:hidden;background:linear-gradient(135deg,var(--lilac),var(--pink));box-shadow:10px 10px 0 var(--ink);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo .ph{font-family:'Caveat';font-size:1.8rem;text-align:center;padding:20px;color:var(--ink)}
+
+/* BENTO */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{border:3px solid var(--ink);border-radius:var(--radius);padding:28px;box-shadow:6px 6px 0 var(--ink);transition:transform .2s;position:relative;overflow:hidden}
+.card:hover{transform:rotate(-1deg) translateY(-4px)}
+.card h3{font-size:1.7rem;margin-bottom:10px}
+.card .em{font-size:2.4rem;display:block;margin-bottom:12px}
+.c1{grid-column:span 3;background:var(--lime)}
+.c2{grid-column:span 3;background:var(--pink);color:#fff}
+.c3{grid-column:span 2;background:var(--lilac)}
+.c4{grid-column:span 2;background:var(--orange)}
+.c5{grid-column:span 2;background:var(--blue);color:#fff}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.g{aspect-ratio:1;border:3px solid var(--ink);border-radius:22px;overflow:hidden;position:relative;box-shadow:5px 5px 0 var(--ink);transition:transform .25s}
+.g:hover{transform:scale(1.04) rotate(1.5deg);z-index:2}
+.g:nth-child(1){background:var(--pink)}.g:nth-child(2){background:var(--lime)}.g:nth-child(3){background:var(--blue)}
+.g:nth-child(4){background:var(--orange)}.g:nth-child(5){background:var(--lilac)}.g:nth-child(6){background:var(--pink)}
+.g:nth-child(7){background:var(--lime)}.g:nth-child(8){background:var(--blue)}
+.g:nth-child(2),.g:nth-child(7){margin-top:24px}
+.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.g span{position:absolute;inset:0;display:grid;place-items:center;font-family:'Caveat';font-size:1.5rem;color:var(--ink);text-align:center;padding:10px}
+.insta-cta{text-align:center;margin-top:44px}
+
+/* STATS */
+.stats{background:var(--ink);color:var(--paper);border-radius:40px;padding:50px 30px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats b{display:block;font-family:'Bricolage Grotesque';font-size:3.2rem;color:var(--lime)}
+.stats div:nth-child(even) b{color:var(--pink)}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+form,.info{border:3px solid var(--ink);border-radius:var(--radius);padding:30px;box-shadow:8px 8px 0 var(--ink)}
+form{background:#fff}
+label{display:block;font-weight:700;margin:14px 0 6px;font-size:.9rem}
+input,select,textarea{width:100%;padding:13px 16px;border:2.5px solid var(--ink);border-radius:16px;font:inherit;background:var(--paper)}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--pink)}
+form .btn{margin-top:22px;width:100%}
+.info{background:var(--lime)}
+.info p{margin-bottom:12px;font-size:1.05rem}
+iframe{width:100%;height:240px;border:3px solid var(--ink);border-radius:20px;margin-top:10px}
+.thanks{display:none;margin-top:14px;font-weight:700;color:#0a7a3b}
+
+footer{background:var(--ink);color:var(--paper);padding:50px 0 30px;margin-top:60px;text-align:center}
+footer .big{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(2.6rem,12vw,9rem);line-height:.9;color:var(--pink);text-transform:uppercase}
+footer p{opacity:.7;margin-top:18px;font-size:.9rem}
+
+.reveal{opacity:0;transform:translateY(30px);transition:.7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .links a:not(.btn){display:none}
+  .links.open{position:absolute;top:70px;left:20px;right:20px;flex-direction:column;background:var(--ink);padding:24px;border-radius:28px;gap:16px}
+  .links.open a:not(.btn){display:block}
+  .menu{display:block}
+  .about,.contact{grid-template-columns:1fr}
+  .bento{grid-template-columns:1fr 1fr}
+  .c1,.c2,.c3,.c4,.c5{grid-column:span 2}
+  .gallery{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .sticker{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#top">zaspire<span>.</span></a>
+    <div class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#vibe">Why Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Visit</a>
+      <a class="btn" href="#contact">Enquire now</a>
+    </div>
+    <button class="menu" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <p class="hand" style="font-size:1.8rem;color:var(--blue)">hey there, future star ✨</p>
+    <h1>School<br>that <span class="hl">gets</span><br>you<span class="o">.</span></h1>
+    <p class="lead">Zaspire The School is where curiosity is loud, mistakes are allowed and every kid finds their thing. Learn. Create. Aspire.</p>
+    <div class="hero-row">
+      <a class="btn pink" href="#contact">Book a campus visit →</a>
+      <a class="btn" href="https://www.instagram.com/zaspiretheschool/" target="_blank" rel="noopener">See us on Insta</a>
+    </div>
+    <div class="sticker s1">100% vibes 🔥</div>
+    <div class="sticker s2">no boring classes</div>
+    <div class="sticker s3">Hyderabad 📍</div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Inspire</span><span>Aspire</span><span>Create</span><span>Explore</span><span>Zaspire</span><span>Inspire</span><span>Aspire</span><span>Create</span><span>Explore</span><span>Zaspire</span>
+    <span>Inspire</span><span>Aspire</span><span>Create</span><span>Explore</span><span>Zaspire</span><span>Inspire</span><span>Aspire</span><span>Create</span><span>Explore</span><span>Zaspire</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="reveal">
+      <span class="tag">About us</span>
+      <h2>Not your parents' school.</h2>
+      <p>At Zaspire, we believe learning should feel like something you're part of, not something that's happening to you. Our classrooms are made for questions, projects, teamwork and big ideas.</p>
+      <p>We blend strong academics with creativity, confidence and real-life skills, so our students grow up ready for whatever's next.</p>
+      <a class="btn" href="#vibe">Why Zaspire?</a>
+    </div>
+    <div class="photo reveal">
+      <img src="images/about.jpg" alt="Students at Zaspire The School" onerror="this.style.display='none'">
+      <div class="ph">drop a school photo here<br>(images/about.jpg)</div>
+    </div>
+  </div>
+</section>
+
+<section id="vibe" style="padding-top:20px">
+  <div class="wrap">
+    <span class="tag">Why Zaspire</span>
+    <h2>The good stuff.</h2>
+    <div class="bento">
+      <div class="card c1 reveal"><span class="em">🧠</span><h3>Learning that sticks</h3><p>Concept-first teaching, projects and activities that make ideas click instead of just memorised.</p></div>
+      <div class="card c2 reveal"><span class="em">🎨</span><h3>Creativity is core</h3><p>Art, music, dance, drama and design are part of everyday school life, not an afterthought.</p></div>
+      <div class="card c3 reveal"><span class="em">🤝</span><h3>Safe & supportive</h3><p>Caring teachers, a kind community, and room to be yourself.</p></div>
+      <div class="card c4 reveal"><span class="em">🚀</span><h3>Future skills</h3><p>Communication, tech, leadership and critical thinking from day one.</p></div>
+      <div class="card c5 reveal"><span class="em">🏆</span><h3>Events & fests</h3><p>Celebrations, competitions and activities all year round.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="stats reveal">
+      <div><b>∞</b>curiosity</div>
+      <div><b>100%</b>good vibes</div>
+      <div><b>1</b>big family</div>
+      <div><b>You</b>at the centre</div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <span class="tag">Gallery</span>
+    <h2>Life at Zaspire 📸</h2>
+    <div class="gallery">
+      <div class="g"><img src="images/1.jpg" alt="Zaspire school life" onerror="this.style.display='none'"><span>photo 1<br>images/1.jpg</span></div>
+      <div class="g"><img src="images/2.jpg" alt="Zaspire school life" onerror="this.style.display='none'"><span>photo 2<br>images/2.jpg</span></div>
+      <div class="g"><img src="images/3.jpg" alt="Zaspire school life" onerror="this.style.display='none'"><span style="color:#fff">photo 3<br>images/3.jpg</span></div>
+      <div class="g"><img src="images/4.jpg" alt="Zaspire school life" onerror="this.style.display='none'"><span>photo 4<br>images/4.jpg</span></div>
+      <div class="g"><img src="images/5.jpg" alt="Zaspire school life" onerror="this.style.display='none'"><span>photo 5<br>images/5.jpg</span></div>
+      <div class="g"><img src="images/6.jpg" alt="Zaspire school life" onerror="this.style.display='none'"><span>photo 6<br>images/6.jpg</span></div>
+      <div class="g"><img src="images/7.jpg" alt="Zaspire school life" onerror="this.style.display='none'"><span>photo 7<br>images/7.jpg</span></div>
+      <div class="g"><img src="images/8.jpg" alt="Zaspire school life" onerror="this.style.display='none'"><span style="color:#fff">photo 8<br>images/8.jpg</span></div>
+    </div>
+    <div class="insta-cta">
+      <p class="hand" style="font-size:1.8rem;margin-bottom:14px">more on the gram 👇</p>
+      <a class="btn pink" href="https://www.instagram.com/zaspiretheschool/" target="_blank" rel="noopener">@zaspiretheschool</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="tag">Visit us</span>
+    <h2>Come say hi 👋</h2>
+    <div class="contact">
+      <form id="enq" onsubmit="return send(event)">
+        <h3 style="font-size:1.8rem">Admission enquiry</h3>
+        <label for="n">Parent's name</label><input id="n" required placeholder="Your name">
+        <label for="p">Phone</label><input id="p" type="tel" required placeholder="Phone number">
+        <label for="c">Class applying for</label>
+        <select id="c"><option>Nursery</option><option>LKG / UKG</option><option>Primary</option><option>Middle school</option><option>High school</option></select>
+        <label for="m">Message</label><textarea id="m" rows="3" placeholder="Anything you'd like to ask?"></textarea>
+        <button class="btn pink" type="submit">Send enquiry →</button>
+        <p class="thanks" id="thanks">Thanks! We'll get back to you soon 💌</p>
+      </form>
+      <div class="info">
+        <h3 style="font-size:1.8rem;margin-bottom:14px">Find us</h3>
+        <p>📍 <b>Zaspire The School</b><br>Murad Nagar, Mehdipatnam,<br>Hyderabad, Telangana</p>
+        <p>📞 <span class="hand" style="font-size:1.3rem">add phone number here</span></p>
+        <p>✉️ <span class="hand" style="font-size:1.3rem">add email here</span></p>
+        <p>📷 <a href="https://www.instagram.com/zaspiretheschool/" target="_blank" rel="noopener"><b>@zaspiretheschool</b></a></p>
+        <iframe title="Map to Zaspire The School" loading="lazy" src="https://www.google.com/maps?q=Murad+Nagar+Mehdipatnam+Hyderabad&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="big">Zaspire</div>
+    <p>© <span id="yr"></span> Zaspire The School · Murad Nagar, Mehdipatnam, Hyderabad</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')));
+// Demo handler: replace with your form service (Formspree, Google Forms, WhatsApp link, etc.)
+function send(e){
+  e.preventDefault();
+  document.getElementById('thanks').style.display='block';
+  e.target.reset();
+  return false;
+}
+</script>
+</body>
+</html>
